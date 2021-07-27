@@ -1,0 +1,4 @@
+model {
+    Location location
+}
+json g.render(location)

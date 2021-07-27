@@ -1,0 +1,7 @@
+inherits template: "/base"
+model {
+    Location location
+}
+json {
+    data tmpl.location(location)
+}
