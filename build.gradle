@@ -7,6 +7,7 @@ buildscript {
         classpath "org.grails.plugins:hibernate5:7.0.5"
         classpath "gradle.plugin.com.github.erdi.webdriver-binaries:webdriver-binaries-gradle-plugin:2.0"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:3.2.4"
+        classpath "org.grails.plugins:views-gradle:2.0.4"
     }
 }
 
@@ -20,6 +21,8 @@ apply plugin:"org.grails.grails-web"
 apply plugin:"com.github.erdi.webdriver-binaries"
 apply plugin:"com.bertramlabs.asset-pipeline"
 apply plugin:"org.grails.grails-gsp"
+apply plugin: "org.grails.grails-web"
+apply plugin: "org.grails.plugins.views-json"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
@@ -37,6 +40,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
+    compile "org.grails.plugins:views-json:2.0.4"
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "org.springframework.boot:spring-boot-starter-tomcat"
     compile "org.grails:grails-web-boot"
